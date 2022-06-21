@@ -10,7 +10,8 @@ footer {
 }
 
 footer p {
-  font-size: 21px;
+  font-family: var(--font-subtitles);
+  font-size: 1.6rem;
   letter-spacing: 0.01em;
-  color: #fff;
+  color: var(--color-primary-white);
 }
