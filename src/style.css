@@ -14,6 +14,26 @@ body {
   --color-primary-white: #fff;
   --color-primary-button: #5f2b34;
   --color-secondary-button: #a14251;
-  --font-titles: 'Montserrat', sans-serif;
-  --font-subtitles: 'Montserrat', sans-serif;
+  --font-titles: "Montserrat", sans-serif;
+  --font-subtitles: "Montserrat", sans-serif;
+}
+
+@import url("./styles/header.css");
+
+:root {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
 }
