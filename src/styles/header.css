@@ -1,0 +1,28 @@
+.header {
+  background-color: var(--color-primary-black);
+  height: 6rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.header__logo {
+  color: var(--color-primary-white);
+  font-size: 2rem;
+  font-family: var(--font-subtitles);
+  font-weight: 700;
+}
+
+.header__nav {
+  display: flex;
+  gap: 6rem;
+}
+
+.header__nav-link {
+  color: var(--color-primary-white);
+  font-size: 1.6rem;
+  font-family: var(--font-subtitles);
+}
