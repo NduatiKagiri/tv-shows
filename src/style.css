@@ -6,12 +6,11 @@
   box-sizing: border-box;
 }
 
-
 body {
-  --color-primary-black: #111111;
+  --color-primary-black: #111;
   --color-primary-gray: #333;
-  --color-secondary-gray: #262626; 
-  --color-primary-white: #ffffff;
+  --color-secondary-gray: #262626;
+  --color-primary-white: #fff;
   --color-primary-button: #5f2b34;
   --color-secondary-button: #a14251;
   --font-titles: 'Montserrat', sans-serif;
