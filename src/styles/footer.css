@@ -1,0 +1,17 @@
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  background: #111;
+  padding: 0 60px;
+  display: flex;
+  align-items: center;
+}
+
+footer p {
+  font-family: var(--font-subtitles);
+  font-size: 1.6rem;
+  letter-spacing: 0.01em;
+  color: var(--color-primary-white);
+}
