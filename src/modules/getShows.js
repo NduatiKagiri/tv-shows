@@ -1,4 +1,5 @@
-const myURL = 'https://api.tvmaze.com/shows';
+import myURL from './baseurl.js';
+import openModal from './popup.js';
 
 const getShows = async () => {
   const response = await fetch(`${myURL}`);
@@ -38,9 +39,16 @@ const displayShows = () => {
           <p><strong>5</strong> likes</p>
         </div>
       </div>
-      <button type="button" class="homebtnc" id="comments${show.id}">Comments</button>
+      <button type="button" class="homebtnc" id="${show.id}">Comments</button>
     </div>
     `;
+  });
+  const btnGetTvShowById = document.querySelectorAll('.homebtnc');
+  btnGetTvShowById.forEach((tvShow) => {
+    tvShow.addEventListener('click', () => {
+      const tvShowId = tvShow.getAttribute('id');
+      openModal(tvShowId);
+    });
   });
 };
 
