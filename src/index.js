@@ -13,6 +13,6 @@ likeBtns.forEach((likeBtn) => {
   likeBtn.addEventListener('click', () => {
     const id = likeBtn.getAttribute('id').slice(4);
     Likes.setLikes(id.toString());
-    Likes.getLikes();
+    window.location.reload();
   });
 });
