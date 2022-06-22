@@ -1,7 +1,7 @@
 .shows {
   width: 100%;
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: auto auto auto auto;
   grid-gap: 45px 30px;
   padding: 20px 0;
   background: #242222;
@@ -20,7 +20,7 @@
 
 .name-likes {
   margin: 10px 0;
-  padding: 0 20%;
+  padding: 0 15%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -53,8 +53,7 @@
   height: auto;
 }
 
-.homebtnc,
-.homebtnr {
+.homebtnc {
   font-family: var(--font-titles);
   font-size: 17px;
   font-weight: 700;
@@ -64,11 +63,6 @@
   padding: 10px 12px;
 }
 
-.homebtnc {
-  margin-bottom: 24px;
-}
-
-.homebtnc:hover,
-.homebtnr:hover {
+.homebtnc:hover {
   letter-spacing: 0.25em;
 }

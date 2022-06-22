@@ -3,7 +3,7 @@ const myURL = 'https://api.tvmaze.com/shows';
 const getShows = async () => {
   const response = await fetch(`${myURL}`);
   let datas = await response.json();
-  datas = datas.slice(0, 6);
+  datas = datas.slice(0, 24);
   const shows = [];
   datas.forEach((data) => {
     const newShow = {
@@ -39,7 +39,6 @@ const displayShows = () => {
         </div>
       </div>
       <button type="button" class="homebtnc" id="comments${show.id}">Comments</button>
-      <button type="button" class="homebtnr" id="reservations${show.id}">Reservations</button>
     </div>
     `;
   });
