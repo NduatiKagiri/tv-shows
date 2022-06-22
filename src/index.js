@@ -12,7 +12,8 @@ const likeBtns = document.querySelectorAll('.likeButton');
 likeBtns.forEach((likeBtn) => {
   likeBtn.addEventListener('click', () => {
     const id = likeBtn.getAttribute('id').slice(4);
-    Likes.setLikes(id.toString());
-    window.location.reload();
+    Likes.setLikes(id);
+    Likes.getLikes();
+    setTimeout(Likes.getLikes(), 500);
   });
 });
