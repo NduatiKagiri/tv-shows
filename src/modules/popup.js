@@ -59,7 +59,6 @@ const htmlModalTvShow = (show) => {
   showsModal.appendChild(modal);
 
   modalClose.addEventListener('click', () => {
-    console.log('close');
     modal.classList.remove('modal');
     showsModal.removeChild(modal);
   });
@@ -68,13 +67,11 @@ const htmlModalTvShow = (show) => {
 const getTvShowById = async (id) => {
   const response = await fetch(`${myURL}/${id}`);
   const dataShow = await response.json();
-  console.log(dataShow.name);
   return dataShow;
 };
 
 const openModal = async (id) => {
   const tvShowId = await getTvShowById(id);
-  console.log('tvshow', tvShowId);
   htmlModalTvShow(tvShowId);
   const genres = document.querySelector('.modal__genres');
   tvShowId.genres.forEach((element) => {

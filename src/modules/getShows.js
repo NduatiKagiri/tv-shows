@@ -44,7 +44,6 @@ const displayShows = () => {
     `;
   });
   const btnGetTvShowById = document.querySelectorAll('.homebtnc');
-  console.log(btnGetTvShowById);
   btnGetTvShowById.forEach((tvShow) => {
     tvShow.addEventListener('click', () => {
       const tvShowId = tvShow.getAttribute('id');
