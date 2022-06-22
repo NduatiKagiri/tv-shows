@@ -48,9 +48,7 @@ const displayShows = () => {
   btnGetTvShowById.forEach((tvShow) => {
     tvShow.addEventListener('click', () => {
       const tvShowId = tvShow.getAttribute('id');
-      console.log(`this button has the id number ${tvShowId}`);
       openModal(tvShowId);
-      /* htmlModalTvShow(); */
     });
   });
 };
