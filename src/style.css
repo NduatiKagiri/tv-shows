@@ -19,6 +19,7 @@ body {
 
 @import url('styles/footer.css');
 @import url("./styles/header.css");
+@import url("./styles/homepage.css");
 
 :root {
   font-size: 62.5%;
