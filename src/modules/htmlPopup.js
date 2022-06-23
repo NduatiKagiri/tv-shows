@@ -46,6 +46,9 @@ const htmlModalTvShow = (show) => {
     modalComments.innerText = 'Reviews';
     const modalGetComments = document.createElement('div');
     modalGetComments.setAttribute('class', 'modal__comments');
+    const modalAddTitle = document.createElement('h2')
+    modalAddTitle.setAttribute('class', 'comment__title');
+    modalAddTitle.innerText = 'Add a New Review';
     const modalAddComments = document.createElement('div');
     modalAddComments.setAttribute('class', 'modal__add-comment' )
   
@@ -64,6 +67,7 @@ const htmlModalTvShow = (show) => {
     modalContainer.appendChild(modalBody);
     modalFooter.appendChild(modalComments);
     modalFooter.appendChild(modalGetComments);
+    modalFooter.appendChild(modalAddTitle);
     modalFooter.appendChild(modalAddComments);
     modalContainer.appendChild(modalFooter);
     modal.appendChild(modalContainer);
