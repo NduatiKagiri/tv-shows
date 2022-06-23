@@ -12,7 +12,7 @@ const itemsCounter = () => {
       items += 1;
     });
   }
-  document.getElementById('count').innerHTML = `<h4>Total number of shows is ( ${items} )</h4>`;
+  document.getElementById('count').innerHTML = `<h4 id="totalCounts">Total number of shows is ( ${items} )</h4>`;
 };
 
 export default class ShowsCounter {
