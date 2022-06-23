@@ -35,8 +35,8 @@ const displayShows = () => {
       <div class="name-likes">
         <h6>${show.name}</h6>
         <div class="likes">
-          <img id="like${show.id}" src="https://nduatikagiri.co.ke/tvshows/love-red-48.png" alt="">
-          <p><strong>5</strong> likes</p>
+          <img class="likeButton" id="like${show.id}" src="https://nduatikagiri.co.ke/tvshows/love-red-48.png" alt="">
+          <p class="showLikes" id="likes${show.id}"><strong>0</strong> Likes</p>
         </div>
       </div>
       <button type="button" class="homebtnc" id="${show.id}">Comments</button>
