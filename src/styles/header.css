@@ -1,4 +1,7 @@
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
   background-color: var(--color-primary-black);
   height: 6rem;
   width: 100%;

@@ -13,7 +13,7 @@ const htmlModalTvShow = (show) => {
   const modalImage = document.createElement('img');
   const modalBodyImage = document.createElement('div');
   modalBodyImage.setAttribute('class', 'modal__body-image');
-  modalImage.setAttribute('src', show.image.medium);
+  modalImage.setAttribute('src', show.image.original);
   modalImage.setAttribute('class', 'modal__image');
   const modalBody = document.createElement('div');
   modalBody.setAttribute('class', 'modal__body');
@@ -53,9 +53,9 @@ const htmlModalTvShow = (show) => {
   modalAddComments.setAttribute('class', 'modal__add-comment');
 
   modalHeader.appendChild(modalClose);
-  modalContainer.appendChild(modalHeader);
   modalBodyImage.appendChild(modalImage);
-  modalContainer.appendChild(modalBodyImage);
+  modalHeader.appendChild(modalBodyImage);
+  modalContainer.appendChild(modalHeader);
   modalBody.appendChild(modalGenres);
   modalBody.appendChild(modalTitle);
   modalFeatures.appendChild(modalDuration);
