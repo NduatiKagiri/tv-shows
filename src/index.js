@@ -8,7 +8,6 @@ Shows.displayShows();
 
 Likes.getLikes();
 
-
 const itemsCounter = () => {
   const shows = document.querySelectorAll('.show');
   const items = shows.length;
