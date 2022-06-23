@@ -1,3 +1,18 @@
+#count {
+  padding: 20px 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #242222;
+}
+
+#count h4 {
+  font-size: 21px;
+  font-family: var(--font-subtitles);
+  color: var(--color-primary-white);
+}
+
 .shows {
   width: 100%;
   display: grid;
@@ -52,6 +67,7 @@
   margin-bottom: 12px;
   width: 24px;
   height: auto;
+  cursor: pointer;
 }
 
 .homebtnc {

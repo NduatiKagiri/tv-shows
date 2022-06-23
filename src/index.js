@@ -1,8 +1,11 @@
 import './style.css';
 import Shows from './modules/getShows.js';
 import Likes from './modules/likes.js';
+import ShowsCounter from './modules/itemsCounter.js';
 
 Shows.getShows();
+
+ShowsCounter.itemsCounter();
 
 Shows.displayShows();
 
