@@ -63,7 +63,7 @@ const openModal = async (id) => {
   htmlModalTvShow(tvShowId);
   const genres = document.querySelector('.modal__genres');
   tvShowId.genres.forEach((element) => {
-    genres.innerHTML += `<li>${element}</li>`;
+    genres.innerHTML += `<li class="modal__genres-li">${element}</li>`;
   });
   addNewComment(tvShowId.id);
   getAllComments(tvShowId.id);
