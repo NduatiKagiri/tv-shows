@@ -1,0 +1,28 @@
+.comments {
+    background-color: var(--color-tertiary-gray);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.comments__header{
+    display:  flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.comments__username{
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.comments__date{
+    color: var(--color-secondary-white);
+}
+
+.comments__detail{
+    color: var(--color-secondary-white);
+}

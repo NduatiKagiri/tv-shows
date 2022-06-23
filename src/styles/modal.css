@@ -63,3 +63,9 @@
   font-weight: 700;
   font-size: 1.4rem;
 }
+
+.comment__title{
+    font-weight: 700;
+    font-size: 1.4rem;
+    margin-bottom: 1.6rem;
+}
