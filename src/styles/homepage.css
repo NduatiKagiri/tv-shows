@@ -83,6 +83,7 @@
   display: none;
   height: auto;
   overflow: visible;
+  max-width: 45px;
 }
 
 @keyframes displayliked {
@@ -113,6 +114,7 @@
   color: var(--color-primary-white);
   background: #242222;
   padding: 10px 12px;
+  cursor: pointer;
 }
 
 .homebtnc:hover {
