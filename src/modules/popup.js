@@ -1,6 +1,7 @@
 import myURL from './baseurl.js';
 import { addComment, getCommentsByItem } from './comments.js';
 import htmlModalTvShow from './htmlPopup.js';
+import commentsCounter from './commentsCounter.js';
 
 const getTvShowById = async (id) => {
   const response = await fetch(`${myURL}/${id}`);
@@ -9,9 +10,12 @@ const getTvShowById = async (id) => {
 };
 
 const getAllComments = async (id) => {
+  const commentCount = document.querySelector('.comment__title-review');
   const comments = document.querySelector('.modal__comments');
   comments.innerHTML = '';
   const getComments = await getCommentsByItem(id);
+  const commentsCount = commentsCounter(getComments);
+  commentCount.innerHTML = `Reviews (${commentsCount})`;
   if (getComments !== 0) {
     getComments.forEach((comment) => {
       comments.innerHTML

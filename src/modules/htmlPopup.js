@@ -42,7 +42,7 @@ const htmlModalTvShow = (show) => {
   const modalFooter = document.createElement('div');
   modalFooter.setAttribute('class', 'modal__footer');
   const modalComments = document.createElement('h2');
-  modalComments.setAttribute('class', 'comment__title');
+  modalComments.setAttribute('class', 'comment__title-review');
   modalComments.innerText = 'Reviews';
   const modalGetComments = document.createElement('div');
   modalGetComments.setAttribute('class', 'modal__comments');
