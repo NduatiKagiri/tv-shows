@@ -1,12 +1,6 @@
-const fetchShows = () => {
-  const shows = JSON.parse(localStorage.getItem('shows'));
-  if (shows) return shows;
-  return [];
-};
-
 const itemsCounter = () => {
   let items = 0;
-  const shows = fetchShows();
+  const shows = JSON.parse(localStorage.getItem('shows'));
   if (shows != null) {
     shows.forEach(() => {
       items += 1;

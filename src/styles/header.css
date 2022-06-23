@@ -26,3 +26,26 @@
   font-size: 1.6rem;
   font-family: var(--font-subtitles);
 }
+
+.burger {
+  display: none;
+  cursor: pointer;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 768px) {
+  .burger {
+    display: block;
+  }
+
+  .header__nav {
+    display: none;
+  }
+}
