@@ -10,7 +10,9 @@ body {
   --color-primary-black: #111;
   --color-primary-gray: #333;
   --color-secondary-gray: #262626;
+  --color-tertiary-gray: #1e1e1eab;
   --color-primary-white: #fff;
+  --color-secondary-white: #eaeaea;
   --color-primary-button: #5f2b34;
   --color-secondary-button: #a14251;
   --font-titles: "Montserrat", sans-serif;
@@ -21,6 +23,7 @@ body {
 @import url("./styles/header.css");
 @import url("./styles/homepage.css");
 @import url("./styles/modal.css");
+@import url("./styles/comment.css");
 
 :root {
   font-size: 62.5%;
