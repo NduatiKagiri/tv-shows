@@ -10,12 +10,12 @@ const getTvShowById = async (id) => {
 };
 
 const getAllComments = async (id) => {
-  const commentCount = document.querySelector('.comment__title-review')
+  const commentCount = document.querySelector('.comment__title-review');
   const comments = document.querySelector('.modal__comments');
   comments.innerHTML = '';
   const getComments = await getCommentsByItem(id);
-  const commentsCount = commentsCounter(getComments)
-  commentCount.innerHTML = `Reviews (${commentsCount})`
+  const commentsCount = commentsCounter(getComments);
+  commentCount.innerHTML = `Reviews (${commentsCount})`;
   if (getComments !== 0) {
     getComments.forEach((comment) => {
       comments.innerHTML
