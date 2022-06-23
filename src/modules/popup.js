@@ -8,7 +8,28 @@ const getTvShowById = async (id) => {
   return dataShow;
 };
 
-const addNewComment = () => {
+const getAllComments = async (id) => {
+  const comments =document.querySelector('.modal__comments')
+    comments.innerHTML='';
+    const getComments = await getCommentsByItem(id);
+    if(getComments !== 0){
+      getComments.forEach((comment)=>{
+        console.log(comment)
+        comments.innerHTML += 
+        ` <div class="comments">
+        <div class="comments__header">
+          <p class="comments__username">${comment.username}</p>
+          <p class="comments__date">${comment.creation_date}</p>
+        </div>
+        <div class="comments__body">
+          <p class="comments__detail">${comment.comment}</p>
+        </div>
+      </div>`;
+       })  
+    }
+}
+
+const addNewComment = (id) => {
   const addComments = document.querySelector('.modal__add-comment')
   addComments.innerHTML = 
   `<div class="add-comment__container">
@@ -31,26 +52,8 @@ const addNewComment = () => {
   }
   inputUserName.value = '';
   inputReview.value = '';
+  setTimeout(() => getAllComments(id), 1000);
  })
-}
-
-const getAllComments = async (id) => {
-  const comments =document.querySelector('.modal__comments')
-  const getComments = await getCommentsByItem(id);
-  console.log('getallfunctio', getComments)
-  getComments.forEach((comment)=>{
-  console.log(comment)
-  comments.innerHTML += 
-  ` <div class="comments">
-  <div class="comments__header">
-    <p class="comments__username">${comment.username}</p>
-    <p class="comments__date">${comment.creation_date}</p>
-  </div>
-  <div class="comments__body">
-    <p class="comments__detail">${comment.comment}</p>
-  </div>
-</div>`;
- })  
 }
 
 const openModal = async (id) => {
@@ -60,8 +63,8 @@ const openModal = async (id) => {
   tvShowId.genres.forEach((element) => {
     genres.innerHTML += `<li>${element}</li>`;
   });
-  addNewComment();
-  getAllComments(id);
+  addNewComment(tvShowId.id);
+  getAllComments(tvShowId.id);
 };
 
 export default openModal;
