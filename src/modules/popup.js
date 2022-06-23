@@ -8,14 +8,7 @@ const getTvShowById = async (id) => {
   return dataShow;
 };
 
-const openModal = async (id) => {
-  const tvShowId = await getTvShowById(id);
-  htmlModalTvShow(tvShowId);
-  const genres = document.querySelector('.modal__genres');
-  tvShowId.genres.forEach((element) => {
-    genres.innerHTML += `<li>${element}</li>`;
-  });
-
+const addNewComment = () => {
   const addComments = document.querySelector('.modal__add-comment')
   addComments.innerHTML = 
   `<div class="add-comment__container">
@@ -39,10 +32,12 @@ const openModal = async (id) => {
   inputUserName.value = '';
   inputReview.value = '';
  })
+}
 
+const getAllComments = async (id) => {
   const comments =document.querySelector('.modal__comments')
   const getComments = await getCommentsByItem(id);
-  
+  console.log('getallfunctio', getComments)
   getComments.forEach((comment)=>{
   console.log(comment)
   comments.innerHTML += 
@@ -56,6 +51,17 @@ const openModal = async (id) => {
   </div>
 </div>`;
  })  
+}
+
+const openModal = async (id) => {
+  const tvShowId = await getTvShowById(id);
+  htmlModalTvShow(tvShowId);
+  const genres = document.querySelector('.modal__genres');
+  tvShowId.genres.forEach((element) => {
+    genres.innerHTML += `<li>${element}</li>`;
+  });
+  addNewComment();
+  getAllComments(id);
 };
 
 export default openModal;
