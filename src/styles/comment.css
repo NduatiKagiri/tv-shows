@@ -26,3 +26,41 @@
 .comments__detail{
     color: var(--color-secondary-white);
 }
+
+.add-comment__container{
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+
+.add-comment__user, .add-comment__review{
+    background-color: var(--color-secondary-gray);
+    color: var(--color-primary-white);
+    border: none;
+    font-family: var(--font-subtitles);
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    width: 50%;
+}
+
+.add-comment__review{
+    width: 100%;
+}
+
+.btn {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    background-color: var(--color-secondary-button);
+    color: var(--color-primary-white);
+    font-weight: 700;
+    border-radius: 0.5rem;
+  }
+
+  .btn-add{
+    width: 30%;
+  }
+  
+  .btn:hover {
+    background-color: var(--color-primary-button);
+  }

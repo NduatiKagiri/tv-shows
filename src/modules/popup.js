@@ -1,7 +1,10 @@
 import myURL from './baseurl.js';
-import {getCommentsByItem} from './comments.js';
+import {addComment, getCommentsByItem} from './comments.js';
 
 const showsModal = document.querySelector('.shows-modal');
+
+
+
 
 const htmlModalTvShow = (show) => {
   const modal = document.createElement('article');
@@ -71,14 +74,12 @@ const htmlModalTvShow = (show) => {
   modalContainer.appendChild(modalFooter);
   modal.appendChild(modalContainer);
   showsModal.appendChild(modal);
-
+  
   modalClose.addEventListener('click', () => {
     modal.classList.remove('modal');
     showsModal.removeChild(modal);
   });
 };
-
-
 
 const getTvShowById = async (id) => {
   const response = await fetch(`${myURL}/${id}`);
@@ -94,11 +95,34 @@ const openModal = async (id) => {
   tvShowId.genres.forEach((element) => {
     genres.innerHTML += `<li>${element}</li>`;
   });
+
+  const addComments = document.querySelector('.modal__add-comment')
+  addComments.innerHTML = 
+  `<div class="add-comment__container">
+  <input class="add-comment__user" type="text" id="username" name="username" placeholder="Write your Name" required/>
+  <textarea
+      class="add-comment__review"
+      placeholder="Write a review..."
+      rows="6"
+      required></textarea>
+  <button id="add_comment" class="btn btn-add" type="button">Submit</button>
+ </div>`
+
+ const btnAddComment = document.querySelector('#add_comment')
+ const inputUserName = document.querySelector('#username')
+ const inputReview = document.querySelector('.add-comment__review')
+
+ btnAddComment.addEventListener('click', ()=>{
+  if (inputUserName.value && inputReview.value) {
+    addComment(`item${id}`,inputUserName.value, inputReview.value);
+  }
+  inputUserName.value = '';
+  inputReview.value = '';
+ })
+
   const comments =document.querySelector('.modal__comments')
-  console.log(comments)
   const getComments = await getCommentsByItem(id);
-  console.log('getcomments',getComments);
- 
+  
   getComments.forEach((comment)=>{
   console.log(comment)
   comments.innerHTML += 
@@ -111,7 +135,7 @@ const openModal = async (id) => {
     <p class="comments__detail">${comment.comment}</p>
   </div>
 </div>`;
- }) 
+ })  
 };
 
 export default openModal;

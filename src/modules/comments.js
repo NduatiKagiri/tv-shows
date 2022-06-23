@@ -7,4 +7,20 @@ const getCommentsByItem = async (id) => {
   return dataComment;
 }
 
-export {getCommentsByItem};
+const addComment = async (item_id, username, comment) => {
+    const response = await fetch(`${url_involvement}/comments`, {
+        method: 'POST',
+        body: JSON.stringify({
+          item_id, 
+          username, 
+          comment
+        }),
+        headers: {
+          'Content-type': 'application/json; charset=UTF-8',
+        },
+      });
+      const messageCreated = await response.json(); 
+      console.log(messageCreated)
+}
+
+export {getCommentsByItem, addComment};
