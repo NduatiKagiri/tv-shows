@@ -83,3 +83,47 @@
 .homebtnc:hover {
   letter-spacing: 0.25em;
 }
+
+@media screen and (max-width: 768px) {
+  #count {
+    padding: 10px 0;
+  }
+
+  #count h4 {
+    font-size: 18px;
+  }
+
+  .shows {
+    grid-template-columns: 100%;
+    grid-gap: 60px 0;
+  }
+
+  .show-img {
+    margin: 0;
+    width: 80%;
+  }
+
+  .name-likes {
+    margin: 5px 0;
+    padding: 0 10%;
+  }
+
+  .name-likes h6 {
+    font-size: 14px;
+    margin-right: 10px;
+  }
+
+  .likes {
+    margin-bottom: 15px;
+  }
+
+  .likes p {
+    font-size: 14px;
+  }
+
+  .likes img {
+    margin-bottom: 12px;
+    width: 24px;
+    height: auto;
+  }
+}
