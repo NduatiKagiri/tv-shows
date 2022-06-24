@@ -5,11 +5,11 @@ import ShowsCounter from './modules/itemsCounter.js';
 
 Shows.getShows();
 
-ShowsCounter.itemsCounter();
-
-Shows.displayShows();
-
-Likes.getLikes();
+setTimeout(() => {
+  ShowsCounter.itemsCounter();
+  Shows.displayShows();
+  Likes.getLikes();
+}, 3000);
 
 const likeBtns = document.querySelectorAll('.likeButton');
 likeBtns.forEach((likeBtn) => {
