@@ -16,10 +16,12 @@
 .shows {
   width: 100%;
   display: grid;
-  grid-template-columns: auto auto auto auto;
-  grid-gap: 45px 30px;
-  padding: 20px 0;
-  background: #242222;
+  grid-template-columns: 18% 18% 18% 18% 18%;
+  grid-gap: 0 2%;
+  padding-left: 2%;
+  padding-top: 2%;
+  padding-bottom: 4%;
+  background-color: var(--color-primary-black);
 }
 
 .show {
@@ -27,19 +29,30 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  border-radius: 7px;
+  padding: 4px 0 10px 0;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  transition: transform 0.4s ease-in-out;
+  background-color: var(--color-tertiary-gray);
 }
 
 .show-img {
-  margin: 0 14%;
+  margin: 0;
+  min-width: 100%;
+}
+
+.show:hover .show-img {
+  filter: brightness(50%);
 }
 
 .name-likes {
   margin: 10px 0;
-  padding: 0 15%;
+  padding: 0 5%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  align-content: space-between;
   width: 100%;
 }
 
@@ -47,7 +60,6 @@
   font-size: 14px;
   font-family: var(--font-subtitles);
   color: var(--color-primary-white);
-  margin-right: 10px;
 }
 
 .likes {
@@ -63,11 +75,37 @@
   color: var(--color-primary-white);
 }
 
-.likes img {
+.likeButton {
   margin-bottom: 12px;
   width: 24px;
   height: auto;
   cursor: pointer;
+}
+
+.likedButton {
+  display: none;
+  height: auto;
+  overflow: visible;
+}
+
+@keyframes displayliked {
+  from {
+    width: 18px;
+  }
+
+  to {
+    width: 30px;
+  }
+}
+
+@keyframes removeliked {
+  from {
+    width: 30px;
+  }
+
+  to {
+    width: 18px;
+  }
 }
 
 .homebtnc {
@@ -78,10 +116,11 @@
   color: var(--color-primary-white);
   background: #242222;
   padding: 10px 12px;
+  cursor: pointer;
 }
 
 .homebtnc:hover {
-  letter-spacing: 0.25em;
+  letter-spacing: 0.1em;
 }
 
 @media screen and (max-width: 768px) {
@@ -96,6 +135,15 @@
   .shows {
     grid-template-columns: 100%;
     grid-gap: 60px 0;
+  }
+
+  .show {
+    padding: 0;
+    border: none;
+  }
+
+  .show:hover {
+    transform: none;
   }
 
   .show-img {
