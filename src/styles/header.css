@@ -1,4 +1,10 @@
 .header {
+<<<<<<< Updated upstream
+=======
+  position: sticky;
+  top: 0;
+  left: 0;
+>>>>>>> Stashed changes
   background-color: var(--color-primary-black);
   height: 6rem;
   width: 100%;
