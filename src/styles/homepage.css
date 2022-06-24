@@ -37,13 +37,13 @@
   background-color: var(--color-tertiary-gray);
 }
 
-.show:hover {
-  filter: brightness(50%);
-}
-
 .show-img {
   margin: 0;
   min-width: 100%;
+}
+
+.show:hover .show-img {
+  filter: brightness(50%);
 }
 
 .name-likes {
@@ -116,6 +116,7 @@
   color: var(--color-primary-white);
   background: #242222;
   padding: 10px 12px;
+  cursor: pointer;
 }
 
 .homebtnc:hover {
